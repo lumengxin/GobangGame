@@ -1,0 +1,7 @@
+<div class="msg-box">
+    <text>
+        {{title}}
+    </text>
+    <textarea onchange="getContent"></textarea>
+    <button value="提交" @click="submit"></button>
+</div>

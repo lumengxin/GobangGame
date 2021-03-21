@@ -1,5 +1,6 @@
 import test from "../../common/test.js"
 import router from "@system.router"
+import Prompt from '@system.prompt';
 
 export default {
 	data: {
@@ -23,5 +24,11 @@ export default {
 		router.push({
 			uri: 'pages/product/product'
 		})
+	},
+	handleMsg(e) {
+		Prompt.showToast({
+			message: e.detail.text
+		})
 	}
 }
+

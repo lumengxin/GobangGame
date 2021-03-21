@@ -1,5 +1,6 @@
 <!--组件引入-->
 <element src="../../common/hello.hml" name="hello"></element>
+<element src="../../common/component/msgBox/index.hml" name="msg-box"></element>
 
 <div class="container">
     <!--简写 @click-->
@@ -19,4 +20,6 @@
     <div>
         <text @click="gotoProduct">跳转到product页面</text>
     </div>
+    <!--事件名：hml中小写-连接，js中驼峰；组件名：不能直接从name驼峰转小写-连接-->
+    <msg-box title="评论" @send-msg="handleMsg"></msg-box>
 </div>
