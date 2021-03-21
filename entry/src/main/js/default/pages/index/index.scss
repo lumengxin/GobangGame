@@ -1,9 +1,12 @@
+@import "../../common/style.scss";
+
 .container {
+	background-color: $bgColor;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
 .title {
-	font-size: 100px;
+	font-size: 40px;
 }

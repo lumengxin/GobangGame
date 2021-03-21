@@ -1,8 +1,16 @@
 export default {
 	data: {
-		title: ""
+		title: "",
+		products: [
+			"huiwei",
+			"harmonyos"
+		],
+		isDisplay: true
 	},
 	onInit() {
 		this.title = this.$t('strings.world');
+	},
+	show() {
+		this.isDisplay = !this.isDisplay
 	}
 }

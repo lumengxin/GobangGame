@@ -1,5 +1,16 @@
+<!--组件引入-->
+<element src="../../common/hello.hml" name="hello"></element>
+
 <div class="container">
-    <text class="title">
+    <!--简写 @click-->
+    <text class="title" onclick="show">
         {{ $t('strings.hello') }} {{title}}
     </text>
+    <!--for循环写法较为灵活，show需要加双括弧-->
+    <block for="products" if="isDisplay">
+        <text class="title">
+            {{$idx}} - {{$item}}
+        </text>
+    </block>
+    <hello></hello>
 </div>
