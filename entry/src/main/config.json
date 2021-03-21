@@ -14,6 +14,7 @@
   },
   "deviceConfig": {},
   "module": {
+    "reqPermissions": [{"name":  "ohos.permission.INTERNET"}],
     "package": "com.example.gobanggame",
     "name": ".MyApplication",
     "deviceType": [

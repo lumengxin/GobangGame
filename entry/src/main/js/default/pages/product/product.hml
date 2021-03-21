@@ -1,5 +1,18 @@
+<!-- xxx.hml -->
 <div class="container">
-    <text class="title">
-        Hello {{title}}
-    </text>
+    <swiper class="swiper" id="swiper" index="0" indicator="true" loop="true" digital="false">
+        <div class = "swiperContent" >
+            <text class = "text">First screen</text>
+        </div>
+        <div class = "swiperContent">
+            <text class = "text">Second screen</text>
+        </div>
+        <div class = "swiperContent">
+            <text class = "text">Third screen</text>
+        </div>
+    </swiper>
+    <input class="button" type="button" value="swipeTo" onclick="swipeTo"></input>
+    <input class="button" type="button" value="showNext" onclick="showNext"></input>
+    <input class="button" type="button" value="showPrevious" onclick="showPrevious"></input>
+    <image src="https://www.harmonyos.com/resource/image/develop/release-notes.png"></image>
 </div>
