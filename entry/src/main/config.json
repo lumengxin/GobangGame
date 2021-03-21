@@ -12,7 +12,13 @@
       "releaseType": "Beta1"
     }
   },
-  "deviceConfig": {},
+  "deviceConfig": {
+    "default": {
+      "network": {
+        "cleartextTraffic": true
+      }
+    }
+  },
   "module": {
     "reqPermissions": [{"name":  "ohos.permission.INTERNET"}],
     "package": "com.example.gobanggame",

@@ -6,7 +6,7 @@ export default {
 	data: {
 		title: "",
 		products: [
-			"huiwei",
+			"huawei",
 			"harmonyos"
 		],
 		isDisplay: true

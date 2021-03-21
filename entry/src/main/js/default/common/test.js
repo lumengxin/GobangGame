@@ -3,6 +3,8 @@ import prompt from '@system.prompt';
 
 export default {
 	dialog() {
-		prompt.showDialog("hello show something")
+		prompt.showDialog({
+			title: "消息弹框"
+		})
 	}
 }
