@@ -1,5 +1,3 @@
 <div class="container">
-    <text class="title">
-        {{ $t('strings.hello') }} {{title}}
-    </text>
+    <button @click="goChess">棋盘</button>
 </div>

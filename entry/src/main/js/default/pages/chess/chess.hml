@@ -1,0 +1,3 @@
+<div class="container">
+    <canvas class="canvas" ref="chess"></canvas>
+</div>
