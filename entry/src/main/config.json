@@ -47,7 +47,8 @@
     "js": [
       {
         "pages": [
-          "pages/index/index"
+          "pages/index/index",
+          "pages/product/product"
         ],
         "name": "default",
         "window": {

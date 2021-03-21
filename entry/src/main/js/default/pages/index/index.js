@@ -1,3 +1,6 @@
+import test from "../../common/test.js"
+import router from "@system.router"
+
 export default {
 	data: {
 		title: "",
@@ -12,5 +15,13 @@ export default {
 	},
 	show() {
 		this.isDisplay = !this.isDisplay
+	},
+	prompt() {
+		test.dialog()
+	},
+	gotoProduct() {
+		router.push({
+			uri: 'pages/product/product'
+		})
 	}
 }

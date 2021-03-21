@@ -13,4 +13,10 @@
         </text>
     </block>
     <hello></hello>
+    <div @click="prompt">
+        <text>dialog</text>
+    </div>
+    <div>
+        <text @click="gotoProduct">跳转到product页面</text>
+    </div>
 </div>
