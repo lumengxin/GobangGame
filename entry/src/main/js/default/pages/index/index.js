@@ -1,3 +1,5 @@
+import prompt from '@system.prompt';
+
 export default {
 	data: {
 		cxt: '',
@@ -9,7 +11,10 @@ export default {
 	// 角色
 		me: true,
 	// 是否结束
-		over: false
+		over: false,
+		// 统计赢的组
+		myWin: [],
+		computerWin: []
 	},
 	onInit() {
 		this.initChessBoard()
@@ -41,6 +46,11 @@ export default {
 			}
 		}
 		console.info("this.chessboard: "+this.chessboard)
+
+		for (let i = 0; i < this.count; i++) {
+			this.myWin[i] = 0
+			this.computerWin[i] = 0
+		}
 	},
 	initArr() {
 		// 初始化赢法数组 [x, y, groupid]
@@ -91,7 +101,6 @@ export default {
 		console.info("this.wins: "+this.wins)
 	},
 	onPressChess(e) {
-		console.info("this.e: "+e)
 		if (this.over) {
 			return
 		}
@@ -107,6 +116,20 @@ export default {
 			this.chessboard[x][y] = 1
 			console.info("this.xy: "+this.x+", "+this.y)
 			this.drawChess(x, y)
+			// 判断是否赢了
+			this.checkWin(x, y)
+			// 计算机下棋子
+			if (!this.over) {
+				this.me = !this.me
+				this.computerAI(this.me)
+			}
+
+		}
+	},
+	computerAI(me) {
+		this.drawChess(0, 0)
+		if (!this.over) {
+			this.me = !this.me
 		}
 	},
 	drawChess(x, y) {
@@ -117,5 +140,18 @@ export default {
 			this.cxt.fillSytle("red")
 		}
 		this.cxt.fill()
+	},
+	checkWin(x, y) {
+		for (let i = 0; i < this.count; i++) {
+			if (this.wins[x][y][i]) {
+				this.myWin[i]++
+				if (this.myWin[i] === 5) {
+					this.over = true
+					prompt.showToast({
+						message: "恭喜，您赢了"
+					})
+				}
+			}
+		}
 	}
 }
