@@ -1,5 +1,0 @@
-<div class="container">
-    <canvas class="canvas" ref="chess" ontouchstart="onPressChess"></canvas>
-</div>
-
-

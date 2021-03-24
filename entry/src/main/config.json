@@ -47,8 +47,7 @@
     "js": [
       {
         "pages": [
-          "pages/index/index",
-          "pages/chess/chess"
+          "pages/index/index"
         ],
         "name": "default",
         "window": {
